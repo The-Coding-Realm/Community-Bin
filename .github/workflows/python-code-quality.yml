@@ -11,6 +11,7 @@ jobs:
           python-version: 3.9
       - uses: psf/black@stable
   check:
+    runs-on: ubuntu-latest
     needs: [build]
     steps:
       - run: isort --check-only --diff .
