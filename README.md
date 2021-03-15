@@ -25,7 +25,7 @@ We do this to ensure we can request changes in the pull request and fix any bad 
 - The first few lines of the file **must state** the following
   - Author info
   - License info (MIT, MPL2, etc)
-  - Version info (This must follow [`SemVer 2`](https"://semver.org))
+  - Version info (This must follow [`SemVer 2`](https://semver.org))
   - Brief Description
 - Although **not required**, these could be added as well
   - Article(s) you've referred to write the code
