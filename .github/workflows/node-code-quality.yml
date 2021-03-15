@@ -1,12 +1,9 @@
-name: Node Code Quality
+name: Python Code Quality
 on: [push, pull_request]
 
 jobs:
   checks:
     runs-on: ubuntu-latest
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2.1.5
-
-    - name: Check Formatting
-      - uses: actions/checkout@v2
+    steps:
+      - uses: actions/setup-node@v2.1.5
       - run: npx prettier --check .
