@@ -33,6 +33,7 @@ We do this to ensure we can request changes in the pull request and fix any bad 
   - License info (MIT, MPL2, etc)
   - Version info (This must follow [`SemVer 2`](https://semver.org))
   - Brief Description
+  - Dependencies of your code if any
 - Although **not required**, these could be added as well
   - Article(s) you've referred to write the code
   - Relevant/referred StackOverflow question links
