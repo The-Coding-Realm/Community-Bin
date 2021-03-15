@@ -1,4 +1,4 @@
-name: Python Code Quality
+name: Node Code Quality
 on: [push, pull_request]
 
 jobs:
