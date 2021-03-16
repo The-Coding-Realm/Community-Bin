@@ -7,5 +7,5 @@ jobs:
     steps:
       - uses: actions/setup-node@v2.1.5
       - run: |
-        cd javascript
-        npx prettier --check .
+          cd javascript
+          npx prettier --check .
