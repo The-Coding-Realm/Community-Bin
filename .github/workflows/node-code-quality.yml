@@ -8,5 +8,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.5
       - run: |
-          cd javascript
-          npx prettier --check .
+          npx prettier --check javascript
