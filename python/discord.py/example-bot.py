@@ -14,7 +14,7 @@ async def on_ready():
 @commands.command(name="ping")
 async def _ping(ctx):
     latency = bot.latency * 1000  # convert to ms
-    
+
     embed = discord.Embed(
         title="Pong!",  # make an embed to send
         description=f"My latency is {latency:.2f}ms",
