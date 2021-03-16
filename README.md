@@ -26,12 +26,10 @@ We do this to ensure we can request changes in the pull request and fix any bad 
 
 ## Code Requirements
 
-- Your code **must be under MIT** or similar license
-- The files you're adding **must be written by you** and must attribute to any co-authors (No plagarism)
+- Your code **must not be under any license**. Upon submission, you agree that you are the owner of the code and are henceforth surrendering all ownership and rights to The Coding Academy. Any code inside this repository is under the [MIT License](https://opensource.org/licenses/MIT). 
+- The files you're adding **must be written by you** and must attribute to any co-authors (No plagiarism)
 - The first few lines of the file **must state** the following
   - Author info
-  - License info (MIT, MPL2, etc)
-  - Version info (This must follow [`SemVer 2`](https://semver.org))
   - Brief Description
   - Dependencies of your code if any
 - Although **not required**, these could be added as well
