@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2.1.5
-      - run: npx prettier --check **/*.js
+      - run: npx prettier --check "**/*.js"
