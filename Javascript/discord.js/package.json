@@ -1,0 +1,22 @@
+{
+  "name": "community-bin",
+  "version": "1.0.0",
+  "description": "Discord.js Code for Community Bin :p",
+  "main": "code-example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Coding-Academy/Community-Bin.git"
+  },
+  "author": "SetItOnZygote",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/The-Coding-Academy/Community-Bin/issues"
+  },
+  "homepage": "https://github.com/The-Coding-Academy/Community-Bin#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
