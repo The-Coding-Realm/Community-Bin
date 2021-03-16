@@ -1,0 +1,6 @@
+[flake8]
+
+# E121,E123,E126,E226,E24,E704 are ignored by default, might want to change later
+
+# 120 line length
+max-line-length = 79
