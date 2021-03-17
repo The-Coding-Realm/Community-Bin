@@ -1,7 +1,7 @@
 # This is an example of a very basic discord bot in python
 import discord
 from discord.ext import commands
-
+ 
 
 bot = commands.Bot(command_prefix=".", description="A basic discord bot")
 
