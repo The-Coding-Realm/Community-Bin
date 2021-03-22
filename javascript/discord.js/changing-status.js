@@ -11,27 +11,26 @@ const client = new Discord.Client();
 
 //changing status
 client.on("ready", () => {
-  
   //set how often the status changes(in milliseconds)
   const refresh = 30000;
-  
+
   //put all your statuses here , Format: [activity,type]
   const status = [
     ["with dog", "PLAYING"],
     ["in the rain", "PLAYING"],
     ["time pass away", "WATCHING"],
     ["clouds float away", "WATCHING"],
-    ["starts fall","WATCHING"],
+    ["starts fall", "WATCHING"],
     ["birds chirping", "LISTENING"],
     ["some jam", "LISTENING"],
-    ["life","STREMING"],
+    ["life", "STREMING"],
   ];
-  
+
   //sets a random activity every `refresh` ms
   setInterval(() => {
     const i = Math.floor(Math.random() * (status.length - 1));
     client.user.setActivity(status[i][0], {
-      type: status[i][1]
+      type: status[i][1],
     });
   }, refresh);
 });
