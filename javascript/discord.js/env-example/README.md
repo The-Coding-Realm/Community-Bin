@@ -26,7 +26,7 @@ Description:
 Node-modules:  
 - discord.js ^12 
 - dotenv ^8
-- 
+ 
 Try it here:  
 - https://glitch.com/edit/#!/env-example
 
