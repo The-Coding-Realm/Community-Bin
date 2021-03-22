@@ -17,17 +17,16 @@ client.once("ready", () => {
 });
 
 //This is called everytime someone sends a message
-client.on("message", message => {
+client.on("message", (message) => {
   //Ignores any message if it doesn't start with the prefix or if a bot sends the message
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   //Put your commands or command handler here
   //This is a simple ping command
   if (message.content.startsWith(`${prefix}ping`)) {
     message.channel.send(
-      `🏓 Latency is ${Date.now() -
-        message.createdTimestamp}ms. API Latency is ${Math.round(
-        client.ws.ping
-      )}ms`
+      `🏓 Latency is ${
+        Date.now() - message.createdTimestamp
+      }ms. API Latency is ${Math.round(client.ws.ping)}ms`
     );
   }
 });
