@@ -1,3 +1,4 @@
+# if you havent read README.md in this folder, go check that out
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
@@ -8,6 +9,8 @@ with open("README.md", "r") as fh:
 setup(
     name='MyModule',  # Your module name
     packages=find_packages(include=['Mymodule']),  # Your module file
+    # You may change Mymodule folder name but
+    # you must change the name here too.
     version='0.1.0',  # module version
     description='My module made with python!',  # module short description
     long_description=long_description,  # module long description
