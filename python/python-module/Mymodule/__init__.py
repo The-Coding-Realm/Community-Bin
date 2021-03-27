@@ -6,7 +6,7 @@
 # and import the file here
 # import example:
 # from .specialfunction import *
-# we use .filename to specify 
+# we use .filename to specify
 # that the file is in the same directory
 # and * to import all of function it has
 # if you need to import an external package
@@ -18,4 +18,4 @@
 # you may delete this and make your own
 # or add more function
 def myfuntion(a, b):
-  return a + b
+    return a + b
