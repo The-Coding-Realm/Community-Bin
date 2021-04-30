@@ -31,7 +31,7 @@ async def _purge(ctx,*, amount=1): # this way the default amount will be 1
     embed = discord.Embed(
         title="Done!",
         description=f"purged {amount} of messages!"
-    ) # making an embed to send after the ctx.channel has been purged
+    ) #making an embed to send after the ctx.channel has been purged
     await ctx.send(embed=embed)
 
 bot.add_command(_purge)
