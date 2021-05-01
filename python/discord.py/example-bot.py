@@ -24,5 +24,8 @@ async def _ping(ctx):
 
 bot.add_command(_ping)
 
+# you can uncomment the line below if you have the api-cog-example cog already
+#bot.load_extension("api-cog-example")
+
 if __name__ == "__main__":  # make sure the file isn't being imported
     bot.run("YOUR_TOKEN_HERE")  # put your own bot token in here
