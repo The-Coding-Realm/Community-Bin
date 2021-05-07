@@ -22,7 +22,21 @@ async def _ping(ctx):
 
     await ctx.send(embed=embed)
 
+
+@commands.command(name="purge", aliases=['clear'])
+async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
+    """
+    A command that clears messages
+    """
+    await ctx.channel.purge(limit=amount + 1)  # clear trigger msg too
+    embed = discord.Embed(title="Done!",
+                          description=f"Purged {amount} messages!")
+    await ctx.send(embed=embed)
+
+
 bot.add_command(_ping)
+bot.add_command(_purge)
+
 
 if __name__ == "__main__":  # make sure the file isn't being imported
     bot.run("YOUR_TOKEN_HERE")  # put your own bot token in here
