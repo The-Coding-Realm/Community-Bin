@@ -28,8 +28,9 @@ async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
     """
     A command that clears messages
     """
-    await ctx.channel.purge(limit=amount + 1).  # used amount + 1 because you want to clear the message that triggered the command, as well
-    embed = discord.Embed(title="Done!", description=f"Purged {amount} messages!")  # create an embed to send
+    await ctx.channel.purge(limit=amount + 1).  # clear trigger msg too
+    embed = discord.Embed(title="Done!", 
+                          description=f"Purged {amount} messages!")
     await ctx.send(embed=embed)
 
  
