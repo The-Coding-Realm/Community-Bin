@@ -21,19 +21,19 @@ async def _ping(ctx):
         )
 
     await ctx.send(embed=embed)
-
-bot.add_command(_ping)
-
-
-@commands.command(name="purge", description="A command that clears messages", aliases=['clear'])
-async def _purge(ctx,*, amount=1): # this way the default amount will be 1
-    await ctx.channel.purge(limit = amount) 
-    embed = discord.Embed(
-        title="Done!",
-        description=f"purged {amount} of messages!"
-    ) #making an embed to send after the ctx.channel has been purged
+    
+    
+@commands.command(name="purge", aliases=['clear'])
+async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
+    """
+    A command that clears messages
+    """
+    await ctx.channel.purge(limit=amount + 1).  # used amount + 1 because you want to clear the message that triggered the command, as well
+    embed = discord.Embed(title="Done!", description=f"Purged {amount} messages!")  # create an embed to send
     await ctx.send(embed=embed)
 
+ 
+bot.add_command(_ping)
 bot.add_command(_purge)
 
 
