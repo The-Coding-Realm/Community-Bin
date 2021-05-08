@@ -1,5 +1,5 @@
 # This is an example of a very basic discord bot in python
-import discord
+import discord, os, sys
 from discord.ext import commands
 
 
@@ -40,6 +40,13 @@ bot.add_command(_purge)
 
 # you can uncomment the line below if you have the api-cog-example cog already
 # bot.load_extension("api-cog-example")
+
+@commands.command(name="restart")
+async def _restart(ctx):
+    await ctx.send("Restarting...")
+    os.execv(sys.executable, ['python'] + sys.argv)
+
+bot.add_command(_restart)
 
 if __name__ == "__main__":  # make sure the file isn't being imported
     bot.run("YOUR_TOKEN_HERE")  # put your own bot token in here
