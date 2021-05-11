@@ -24,6 +24,8 @@ async def _ping(ctx):
 
 
 @commands.command(name="purge", aliases=['clear'])
+@commands.has_permissions(manage_messages=True)  # check for the correct perms
+@commands.bot_has_permissions(manage_messages=True)
 async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
     """
     A command that clears messages
@@ -34,8 +36,24 @@ async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
     await ctx.send(embed=embed)
 
 
+@commands.command(name="kick", aliases=['k'])
+@commands.has_guild_permissions(kick_members=True)  # check for the correct perms
+@commands.bot_has_guild_permissions(kick_members=True)
+async def _kick(ctx, member:discord.Member=None,*, reason=None):
+    """
+    A command that kicks members
+    """
+    await member.send(f'You have been kicked from **{server.name}** for `{reason}`')
+    await member.kick(reason=reason)  # This is the line that kicks the member
+    embed = discord.Embed(
+        title="Kicked Member", 
+        description=f"{member.mention} has been kicked for `{reason}`")
+    await ctx.send(embed=embed)
+
+
 bot.add_command(_ping)
 bot.add_command(_purge)
+bot.add_command(_kick)
 
 
 # you can uncomment the line below if you have the api-cog-example cog already
