@@ -33,9 +33,20 @@ async def _purge(ctx, *, amount=1):  # set a default amount, which is 1
                           description=f"Purged {amount} messages!")
     await ctx.send(embed=embed)
 
+@commands.command(name="kick", aliases=['k'])
+@commands.has_permissions(kick_members=True) # This will check the permissions the person that is trying to kick the member has (You can change this to any perm to want but make sure it has the =True at the end)
+async def _kick(ctx, member:discord.Member=None,*, reason=None):
+    """
+    A command that kicks members
+    """
+    await member.kick(reason=reason) # This is the line that kicks the member
+    embed = discord.Embed(title="Done!", description=f"{member.mention} has been kicked for {reason} !")
+    await ctx.send(embed=embed)
+    await member.send(embed=embed) # This will send the member a message in their dms (direct messages).
 
 bot.add_command(_ping)
 bot.add_command(_purge)
+bot.add_command(_kick)
 
 
 # you can uncomment the line below if you have the api-cog-example cog already
